@@ -14,4 +14,5 @@ use App\Http\Controllers\IndexController;
 |
 */
 
+/* All normal pages */
 Route::get('/', IndexController::class);

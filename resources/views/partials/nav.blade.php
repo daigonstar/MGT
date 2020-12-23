@@ -20,7 +20,7 @@
                     <span class="btn btn-outline-success ml-2">My Account</a>
                     <a class="btn btn-outline-danger ml-2">Logout</a>
                 @else
-                    <a class="btn btn-outline-success mr-2">Login</a>
+                    <a class="btn btn-outline-success mr-2" href="{{ route('login') }}">Login</a>
                     <a class="btn btn-outline-warning">Register</a>
                 @endauth
             </form>

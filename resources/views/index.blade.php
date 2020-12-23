@@ -1,4 +1,3 @@
-
 @extends('layout.page')
 @section('main_content')
     <div>
