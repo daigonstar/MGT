@@ -8,21 +8,24 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="navbar-item">
-                    <a>Home</a>
+                    <a></a>
                 </li>
                 <li class="navbar-item">
-                    <a>Games</a>
+                    <a></a>
                 </li>
             </ul>
-            <form class="form-inline">
+            <div class="form-inline">
                 @auth
                     <img class="rounded-circle" src="{{ Auth::user()->getAvatar('50') }}" alt="{{ Auth::user()->name }}">
-                    <a class="btn btn-outline-danger rounded-circle ml-2">Logout</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="btn btn-outline-danger rounded-circle ml-2">Logout</button>
+                </form>
                 @else
                     <a class="btn btn-outline-success mr-2" href="{{ route('login') }}">Login</a>
                     <a class="btn btn-outline-warning" href="{{ route('register') }}">Register</a>
                 @endauth
-            </form>
+            </div>
         </div>
     </div>
 </nav>
