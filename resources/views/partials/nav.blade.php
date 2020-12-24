@@ -16,12 +16,11 @@
             </ul>
             <form class="form-inline">
                 @auth
-                    <span class="navbar-text">Hi {{ Auth::user()->name }}</span>
-                    <span class="btn btn-outline-success ml-2">My Account</a>
-                    <a class="btn btn-outline-danger ml-2">Logout</a>
+                    <img class="rounded-circle" src="{{ Auth::user()->getAvatar('50') }}" alt="{{ Auth::user()->name }}">
+                    <a class="btn btn-outline-danger rounded-circle ml-2">Logout</a>
                 @else
                     <a class="btn btn-outline-success mr-2" href="{{ route('login') }}">Login</a>
-                    <a class="btn btn-outline-warning">Register</a>
+                    <a class="btn btn-outline-warning" href="{{ route('register') }}">Register</a>
                 @endauth
             </form>
         </div>
